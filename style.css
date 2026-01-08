@@ -7,7 +7,23 @@ h2{
     color: white;
     font-family: cursive;
 }
-
 body{
     background-color: gray;
+}
+
+.tabuleiro{
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    border: 2px solid black;
+    width: fit-content; /* DEIXA A BORDA COM O TAMANHO EXATO */
+    margin: 20px auto; /* CENTRALIZA E CRIA UM ESPAÇO INVISÍVEL */
+}
+
+.quadrado {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    box-sizing: border-box; /* IMPEDE QUE A BORDA AUMENTE O TAMANHO DA CASA */
 }
