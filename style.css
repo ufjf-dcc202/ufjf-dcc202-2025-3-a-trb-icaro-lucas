@@ -1,17 +1,22 @@
 /* MUDA A COR E A FONTE */
-h1{
+h1 {
+    color: white;
+    font-family: cursive;
+    margin-bottom: -10px;
+}
+h2 {
     color: white;
     font-family: cursive;
 }
-h2{
+h3 {
     color: white;
     font-family: cursive;
 }
-body{
+body {
     background-color: gray;
 }
 
-.tabuleiro{
+.tabuleiro {
     display: grid;
     grid-template-columns: repeat(5, 60px);
     grid-template-rows: repeat(5, 60px);
@@ -19,11 +24,115 @@ body{
     width: fit-content; /* DEIXA A BORDA COM O TAMANHO EXATO */
     margin: 20px auto; /* CENTRALIZA E CRIA UM ESPAÇO INVISÍVEL */
 }
-
 .quadrado {
     width: 60px;
     height: 60px;
     background-color: #ffffff;
     border: 1px solid black;
     box-sizing: border-box; /* IMPEDE QUE A BORDA AUMENTE O TAMANHO DA CASA */
+}
+
+.painel-controle {
+    width: 100%; /* LARGURA */
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto; /* EMPURRA A MARGEM ESQUERDA */
+    margin-right: auto; /* EMPURRA A MARGEM DIREITA */
+    display: flex; /* CENTRALIZA OS COMANDOS DENTRO DA CAIXA */
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes-acoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* ESPAÇO ENTRE OS BOTÕES */
+}
+.btn-acao {
+    padding: 10px 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 8px; /* ARREDONDA O BOTÃO */
+    background-color: #3498db;
+    border-bottom: 4px solid #2980b9; /* SOMBRA INFERIOR */
+    transition: all 0.1s;
+}
+.btn-pular {
+    background-color: #e67e22;
+    border-bottom: 4px solid #a84d05;
+}
+.btn-luz {
+    background-color: #9b59b6;
+    border-bottom: 4px solid #7d3c98;
+}
+.btn-acao:hover { /* EFEITO AO PASSAR O MOUSE */
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+.btn-acao:active { /* EFEITO AO CLICAR */
+    transform: translateY(2px);
+    border-bottom-width: 0px;
+}
+
+.programacao {
+    margin: 20px 0;
+}
+.programacao h3 {
+    color: white;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.fila-comandos {
+    background: rgba(0, 0, 0, 0.3);
+    min-height: 65px;
+    border: 2px dashed #eee;
+    border-radius: 12px; /* ARREDONDA BORDA */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* CENTRALIZA A EXIBIÇÃO DOS COMANDOS */
+    padding: 10px; /* DISTÂNCIA DO CONTEÚDO ATÉ A BORDA */
+    gap: 8px; /* DISTÂNCIA ENTRE ITENS */
+    overflow-x: auto;
+    width: 100%; /* GARANTE QUE USE O ESPAÇO DO PAINEL-CONTROLE */
+    box-sizing: border-box;
+}
+
+.botoes-execucao {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* DISTÂNCIA ENTRE OS BOTÕES */
+}
+.btn-executar {
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-bottom: 5px solid #1e8449;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.btn-limpar {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-bottom: 5px solid #c0392b;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+/* EFEITO DE CLIQUE PARA OS BOTÕES EXECUTÁVEIS */
+.btn-executar:active, .btn-limpar:active {
+    transform: translateY(4px);
+    border-bottom-width: 0px;
 }
