@@ -136,3 +136,18 @@ body {
     transform: translateY(4px);
     border-bottom-width: 0px;
 }
+
+.icone-comando {
+    background-color: #555;
+    color: white;
+    padding: 8px; /* DISTÂNCIA DO CONTEÚDO ATÉ A BORDA */
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
