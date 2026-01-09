@@ -54,3 +54,18 @@ btnPlay.addEventListener('click', () => {
     console.log("Executando sequência:", sequenciaComandos);
     alert("Robô executando: " + sequenciaComandos.join(" -> "));
 });
+
+let roboPos = { x: 0, y: 0 };
+
+function atualizarRoboNoTabuleiro() {
+    const quadrados = document.querySelectorAll('.quadrado');
+    quadrados.forEach(q => q.classList.remove('robo'));
+
+    const quadradoDestino = document.querySelector(`.quadrado[data-x="${roboPos.x}"][data-y="${roboPos.y}"]`);
+
+    if (quadradoDestino) {
+        quadradoDestino.classList.add('robo');
+    }
+}
+
+atualizarRoboNoTabuleiro();

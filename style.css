@@ -151,3 +151,14 @@ body {
     from { opacity: 0; transform: scale(0.5); }
     to { opacity: 1; transform: scale(1); }
 }
+
+.robo {
+    background-image: url('imagemrobo.png'); 
+    background-size: 80%; /* NÃO ENCOSTAR NAS BORDAS */
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    
+    position: relative;
+    z-index: 5;
+}
